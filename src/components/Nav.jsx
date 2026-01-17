@@ -68,7 +68,7 @@ function Nav() {
             onClick={closeMenu}
           >
             <img 
-              src="/vestral-logo.png" 
+              src={`${import.meta.env.BASE_URL}vestral-logo.png`}
               alt="Vestral Labs" 
               className="h-[72px] w-auto"
             />

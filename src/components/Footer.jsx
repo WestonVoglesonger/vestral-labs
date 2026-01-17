@@ -7,7 +7,7 @@ function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-4">
             <img 
-              src="/vestral-logo.png" 
+              src={`${import.meta.env.BASE_URL}vestral-logo.png`}
               alt="Vestral Labs" 
               className="h-[72px] w-auto opacity-80"
             />
