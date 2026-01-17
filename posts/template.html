@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- EDIT: Update title -->
+  <title>Post Title — Vestral Labs</title>
+  <!-- EDIT: Update description -->
+  <meta name="description" content="Brief description of this post for SEO and social sharing.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo">Vestral<span>Labs</span></a>
+      <button class="nav__toggle" aria-label="Toggle navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <ul class="nav__links">
+        <li><a href="../problem.html" class="nav__link">Problem</a></li>
+        <li><a href="../platform.html" class="nav__link">Platform</a></li>
+        <li><a href="../standards.html" class="nav__link">Standards</a></li>
+        <li><a href="../services.html" class="nav__link">Services</a></li>
+        <li><a href="../roadmap.html" class="nav__link">Roadmap</a></li>
+        <li><a href="../lab-notes.html" class="nav__link nav__link--active">Lab Notes</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Article -->
+  <article class="article">
+    <div class="container container--narrow">
+
+      <header class="article__header">
+        <!-- EDIT: Update date -->
+        <p class="article__date">January 2025</p>
+        <!-- EDIT: Update title -->
+        <h1 class="article__title">Post Title Goes Here</h1>
+        <!-- EDIT: Add tags -->
+        <div class="post-item__tags">
+          <span class="tag">Category</span>
+          <span class="tag">Topic</span>
+        </div>
+      </header>
+
+      <div class="article__content">
+        <!-- EDIT: Write your content below -->
+
+        <p>
+          Opening paragraph. Set up what this post is about and why it matters.
+          Keep it concise—get to the substance quickly.
+        </p>
+
+        <h2>First Section</h2>
+
+        <p>
+          Your content here. Use short paragraphs for readability.
+        </p>
+
+        <p>
+          Another paragraph. You can use <code>inline code</code> for technical terms.
+        </p>
+
+        <h3>Subsection</h3>
+
+        <p>
+          More detailed content within the section.
+        </p>
+
+        <!-- Example: Callout box -->
+        <div class="callout">
+          <p class="callout__title">Key insight</p>
+          <p class="callout__text">
+            Use callouts to highlight important points or findings.
+          </p>
+        </div>
+
+        <!-- Example: Code block -->
+        <div class="code-block">
+          <span class="code-block__label">Example</span>
+          <pre><code># Code examples go here
+def example():
+    return "formatted nicely"</code></pre>
+        </div>
+
+        <!-- Example: Bullet list -->
+        <ul>
+          <li>First point</li>
+          <li>Second point</li>
+          <li>Third point</li>
+        </ul>
+
+        <h2>Second Section</h2>
+
+        <p>
+          Continue with more content as needed.
+        </p>
+
+        <!-- Example: Blockquote -->
+        <blockquote>
+          "Quotes can be used for emphasis or attribution."
+        </blockquote>
+
+        <h2>Conclusion</h2>
+
+        <p>
+          Wrap up the post. What should the reader take away?
+          What's next?
+        </p>
+
+        <!-- END OF CONTENT -->
+      </div>
+
+      <!-- Back link -->
+      <div style="margin-top: var(--space-3xl); padding-top: var(--space-xl); border-top: 1px solid var(--color-border);">
+        <a href="../lab-notes.html" style="color: var(--color-text-secondary);">← Back to Lab Notes</a>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__text">&copy; 2025 Vestral Labs. Building BCI infrastructure.</p>
+        <ul class="footer__links">
+          <li><a href="../about.html" class="footer__link">About</a></li>
+          <li><a href="../contact.html" class="footer__link">Contact</a></li>
+          <li><a href="../lab-notes.html" class="footer__link">Lab Notes</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
+
+<!--
+================================================================================
+HOW TO CREATE A NEW POST
+================================================================================
+
+1. Copy this file to a new file in the posts/ folder
+   Naming convention: YYYY-MM-slug.html
+   Example: 2025-02-benchmarking-lessons.html
+
+2. Update the following:
+   - <title> tag
+   - <meta name="description"> tag
+   - article__date
+   - article__title
+   - tags (post-item__tags)
+   - article__content (your actual content)
+
+3. Add the post to lab-notes.html:
+   - Add a new <li class="post-item"> in the post-list
+   - Include date, title, excerpt, and tags
+   - Link to your new post file
+
+4. Commit and push to deploy
+
+FORMATTING REFERENCE
+================================================================================
+
+Headers:
+  <h2>Major section</h2>
+  <h3>Subsection</h3>
+
+Paragraphs:
+  <p>Text here.</p>
+
+Links:
+  <a href="url">link text</a>
+
+Inline code:
+  <code>code here</code>
+
+Code blocks:
+  <div class="code-block">
+    <span class="code-block__label">Label</span>
+    <pre><code>code here</code></pre>
+  </div>
+
+Callouts:
+  <div class="callout">
+    <p class="callout__title">Title</p>
+    <p class="callout__text">Content</p>
+  </div>
+
+Blockquotes:
+  <blockquote>Quote text</blockquote>
+
+Lists:
+  <ul>
+    <li>Item</li>
+  </ul>
+
+  <ol>
+    <li>Numbered item</li>
+  </ol>
+
+================================================================================
+-->

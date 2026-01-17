@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Standards & Safety — Vestral Labs</title>
+  <meta name="description" content="Safety envelopes, validation primitives, and interoperability schemas. The boring stuff everyone needs but no one wants to build.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Vestral<span>Labs</span></a>
+      <button class="nav__toggle" aria-label="Toggle navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <ul class="nav__links">
+        <li><a href="problem.html" class="nav__link">Problem</a></li>
+        <li><a href="platform.html" class="nav__link">Platform</a></li>
+        <li><a href="standards.html" class="nav__link nav__link--active">Standards</a></li>
+        <li><a href="services.html" class="nav__link">Services</a></li>
+        <li><a href="roadmap.html" class="nav__link">Roadmap</a></li>
+        <li><a href="lab-notes.html" class="nav__link">Lab Notes</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page">
+    <div class="container container--narrow">
+      <div class="section-header">
+        <p class="section-header__eyebrow">Standards + Safety Layer</p>
+        <h1 class="section-header__title">The boring stuff everyone needs</h1>
+        <p class="section-header__subtitle">
+          Safety envelopes. Validation primitives. Signal quality thresholds. Interoperability schemas.
+          Nobody wants to build this infrastructure—but everyone needs it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Standards Matter -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <h2>Why this matters</h2>
+          <p>
+            Every BCI team builds bespoke safety checks. Some are thorough. Some are not.
+            There's no shared vocabulary for "safe operating envelope" or "validation sufficient
+            for regulatory submission."
+          </p>
+          <p>
+            This slows everyone down. Regulatory bodies see novel validation approaches with
+            every submission. Researchers can't build on each other's safety work. Integration
+            between devices is a custom engineering project every time.
+          </p>
+          <p class="text-muted">
+            We're building the foundation so teams can focus on neuroscience, not paperwork.
+          </p>
+        </div>
+        <div>
+          <div class="callout">
+            <p class="callout__title">The alternative</p>
+            <p class="callout__text">
+              Without shared standards, the BCI industry will fragment into incompatible silos—
+              like early mobile platforms, but with devices in people's brains.
+              Interoperability isn't optional. It's existential.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safety Envelopes -->
+  <section class="section">
+    <div class="container container--narrow">
+      <div class="section-header">
+        <p class="section-header__eyebrow">Component 1</p>
+        <h2 class="section-header__title">Safety Envelopes</h2>
+      </div>
+
+      <p>
+        Defined boundaries for safe BCI operation. Not just "don't exceed X milliamps"—
+        comprehensive operating constraints that account for tissue response, thermal limits,
+        and long-term effects.
+      </p>
+
+      <div class="card-grid" style="margin-top: var(--space-xl);">
+        <div class="card">
+          <h4 class="card__title">Stimulation Constraints</h4>
+          <p class="card__text">
+            Current limits, pulse width bounds, duty cycle maximums.
+            Parameterized by electrode geometry and tissue type.
+          </p>
+        </div>
+        <div class="card">
+          <h4 class="card__title">Recording Constraints</h4>
+          <p class="card__text">
+            Impedance ranges, sampling requirements, artifact thresholds.
+            When to trust the signal, when to flag it.
+          </p>
+        </div>
+        <div class="card">
+          <h4 class="card__title">Thermal Budgets</h4>
+          <p class="card__text">
+            Power dissipation limits based on implant location.
+            Cumulative heating models, not just instantaneous.
+          </p>
+        </div>
+        <div class="card">
+          <h4 class="card__title">Operational Bounds</h4>
+          <p class="card__text">
+            Runtime limits, recovery periods, graceful degradation rules.
+            What happens when limits are approached.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Validation Primitives -->
+  <section class="section section--alt">
+    <div class="container container--narrow">
+      <div class="section-header">
+        <p class="section-header__eyebrow">Component 2</p>
+        <h2 class="section-header__title">Validation Primitives</h2>
+      </div>
+
+      <p>
+        Reusable building blocks for proving your system works as intended.
+        Designed to align with regulatory expectations while remaining practical for engineering teams.
+      </p>
+
+      <ul class="feature-list" style="margin-top: var(--space-xl);">
+        <li class="feature-list__item">
+          <svg class="feature-list__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <p class="feature-list__text">
+            <strong>Signal Integrity Tests</strong> — Verify signal chain from electrode to decoder
+          </p>
+        </li>
+        <li class="feature-list__item">
+          <svg class="feature-list__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <p class="feature-list__text">
+            <strong>Decoder Stability Checks</strong> — Confirm consistent output under known input conditions
+          </p>
+        </li>
+        <li class="feature-list__item">
+          <svg class="feature-list__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <p class="feature-list__text">
+            <strong>Latency Conformance</strong> — Prove timing requirements are met under load
+          </p>
+        </li>
+        <li class="feature-list__item">
+          <svg class="feature-list__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <p class="feature-list__text">
+            <strong>Fault Response Verification</strong> — Confirm graceful handling of edge cases
+          </p>
+        </li>
+        <li class="feature-list__item">
+          <svg class="feature-list__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <p class="feature-list__text">
+            <strong>Long-Term Drift Detection</strong> — Monitor for gradual performance degradation
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Signal Quality -->
+  <section class="section">
+    <div class="container container--narrow">
+      <div class="section-header">
+        <p class="section-header__eyebrow">Component 3</p>
+        <h2 class="section-header__title">Signal Quality Thresholds</h2>
+      </div>
+
+      <p>
+        Standardized definitions for "good enough" signal quality. Not arbitrary—derived from
+        empirical analysis of decoder requirements and clinical outcomes.
+      </p>
+
+      <div class="code-block" style="margin-top: var(--space-xl);">
+        <span class="code-block__label">Example Schema</span>
+        <pre><code>{
+  "signal_quality": {
+    "snr_minimum_db": 6.0,
+    "impedance_range_kohm": [10, 1000],
+    "artifact_rejection": {
+      "motion_threshold_uv": 500,
+      "line_noise_db": -40
+    },
+    "continuity": {
+      "dropout_max_ms": 50,
+      "dropout_rate_max_percent": 0.1
+    }
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "application_class": "motor_decode",
+    "validated_against": "cortex_benchmark_v2"
+  }
+}</code></pre>
+      </div>
+
+      <p style="margin-top: var(--space-lg);">
+        When everyone uses the same quality definitions, results become comparable.
+        A "90% accuracy" claim means something because the input quality is standardized.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interoperability -->
+  <section class="section section--alt">
+    <div class="container container--narrow">
+      <div class="section-header">
+        <p class="section-header__eyebrow">Component 4</p>
+        <h2 class="section-header__title">Interoperability Schemas</h2>
+      </div>
+
+      <p>
+        Common data formats and protocols so devices can actually talk to each other.
+        Not a new standard for standards' sake—minimal, pragmatic schemas that solve
+        real integration problems.
+      </p>
+
+      <div class="card-grid" style="margin-top: var(--space-xl);">
+        <div class="card">
+          <h4 class="card__title">Neural Data Format</h4>
+          <p class="card__text">
+            Standardized container for raw and processed neural signals.
+            Extensible metadata, efficient encoding, streaming support.
+          </p>
+        </div>
+        <div class="card">
+          <h4 class="card__title">Device Capability Schema</h4>
+          <p class="card__text">
+            Machine-readable descriptions of what a device can do.
+            Channel counts, sampling rates, stimulation parameters.
+          </p>
+        </div>
+        <div class="card">
+          <h4 class="card__title">Session Protocol</h4>
+          <p class="card__text">
+            Handshake and configuration exchange between devices.
+            Capability negotiation, synchronization primitives.
+          </p>
+        </div>
+        <div class="card">
+          <h4 class="card__title">Event Taxonomy</h4>
+          <p class="card__text">
+            Common vocabulary for neural events, system states, and annotations.
+            Enables cross-dataset analysis and tool interoperability.
+          </p>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top: var(--space-2xl);">
+        <p class="callout__title">Design philosophy</p>
+        <p class="callout__text">
+          We're not trying to boil the ocean. These schemas solve the 80% case—
+          the integrations that every team needs. Vendor-specific extensions are
+          explicitly supported for the 20% that's genuinely differentiated.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container text-center">
+      <h2>Standards are a multiplier</h2>
+      <p style="max-width: 500px; margin: var(--space-lg) auto var(--space-xl);">
+        Every hour we spend on safety and interoperability saves hundreds of hours
+        across the industry. That's the leverage we're building.
+      </p>
+      <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+        <a href="services.html" class="btn btn--primary">View Services</a>
+        <a href="roadmap.html" class="btn btn--secondary">See Roadmap</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__text">&copy; 2025 Vestral Labs. Building BCI infrastructure.</p>
+        <ul class="footer__links">
+          <li><a href="about.html" class="footer__link">About</a></li>
+          <li><a href="contact.html" class="footer__link">Contact</a></li>
+          <li><a href="lab-notes.html" class="footer__link">Lab Notes</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
